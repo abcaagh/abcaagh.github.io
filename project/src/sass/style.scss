@@ -1,0 +1,59 @@
+:root {
+    font-family: "Montserrat", sans-serif;
+}
+@import './blocks/navbar';
+@import './blocks/counter';
+@import './blocks/_randomHex';
+@import './blocks/todolist';
+@import './blocks/slider';
+@import './blocks/calendar';
+
+body {
+  background: #fff;
+  display: flex;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba($color: #10375c, $alpha: 0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #127681;
+}
+main {
+    margin-left: 200px;
+    width: 100%;
+    height: 100%;
+}
+hr {
+  margin: 0;
+}
+
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  cursor: pointer;
+  padding: 24px;
+  z-index: 999;
+  border-radius: 8px;
+  box-shadow:  0 4px 44px rgba(173, 181, 206, .75);
+  background: #fff;
+  transition-property: all;
+  transition-duration: .25s;
+  &[data-show="false"] {
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &:hover {
+    background-color: #121212;
+    color: #fff;
+  }
+}
