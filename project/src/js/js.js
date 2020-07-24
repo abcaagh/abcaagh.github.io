@@ -247,3 +247,13 @@ scrollToTop.addEventListener('click', () => {
     document.getElementById('year').innerHTML = year
 
 })();
+//pick color
+(function(){
+    const colorContent = document.querySelector('.pick-color')
+    const colorPicker = document.getElementById('colorPicker')
+
+    colorPicker.addEventListener('input', () => {
+        colorContent.style.background = colorPicker.value
+        console.log(colorContent.style.background);
+    })
+})();
