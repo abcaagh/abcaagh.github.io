@@ -1,9 +1,32 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
+}
+
+body {
+    position: relative;
+}
+
+.scroll-to-up {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 899;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+
+.scroll-to-up[data-show=false] {
+    visibility: hidden;
+    opacity: 0;
+    bottom: 0;
 }
 
 .hero {
@@ -23,7 +46,7 @@ header .hero-logo {
     height: 70px;
 }
 
-header > .hero-logo img {
+header>.hero-logo img {
     height: 100%;
 }
 
@@ -34,7 +57,7 @@ header > .hero-logo img {
     width: 800px;
 }
 
-.hero-info > input {
+.hero-info>input {
     width: 250px;
     height: 30px;
     border: 2px solid #4d6a7c;
@@ -46,7 +69,8 @@ header > .hero-logo img {
     text-transform: capitalize;
     color: #376f9e
 }
-.hero-info > input::placeholder {
+
+.hero-info>input::placeholder {
     text-transform: uppercase;
 }
 
@@ -54,17 +78,20 @@ header > .hero-logo img {
     display: flex;
     align-items: center;
 }
+
 .hero-phone img {
     height: 20px;
     display: block;
     margin-right: 3px;
 }
+
 .hero-phone a {
     font-size: 15px;
     text-decoration: none;
     color: black;
     font-weight: 500;
 }
+
 .hero-phone a:hover {
     color: #4d6a7c;
 }
@@ -75,11 +102,13 @@ header > .hero-logo img {
     position: relative;
     z-index: 2;
 }
+
 .languages li {
     margin-left: 6px;
     position: relative;
     padding: 3px;
 }
+
 .languages li.active::before {
     content: '';
     position: absolute;
@@ -90,15 +119,19 @@ header > .hero-logo img {
     top: 0;
     border-radius: 50px;
 }
+
 .languages li:not(.active) a:hover {
     color: #376f9e;
 }
-.languages li.active a{
+
+.languages li.active a {
     color: #fff;
 }
+
 .languages li:first-child {
     margin-left: 0;
 }
+
 .languages li a {
     position: relative;
     font-weight: 500;
@@ -132,7 +165,7 @@ header > .hero-logo img {
     justify-content: space-between;
 }
 
-.menu ul a{
+.menu ul a {
     color: black;
     text-decoration: none;
     font-weight: 500;
@@ -140,10 +173,9 @@ header > .hero-logo img {
     transition: color .2s;
 }
 
-.menu ul li:hover a{
-   color: #4d6a7c;
+.menu ul li:hover a {
+    color: #4d6a7c;
 }
-
 
 .hero-content {
     min-height: 300px;
@@ -155,10 +187,12 @@ header > .hero-logo img {
     font-weight: 300;
     line-height: 1.5;
 }
+
 .title {
-  font-size: 50px;  
-  font-weight: 800;
+    font-size: 50px;
+    font-weight: 800;
 }
+
 .btn {
     margin-top: 20px;
     background: rgb(56, 112, 157);
@@ -172,7 +206,6 @@ header > .hero-logo img {
     transition: .2s;
 }
 
-
 .services {
     min-height: 700px;
     padding: 40px;
@@ -183,6 +216,7 @@ header > .hero-logo img {
     display: flex;
     flex-wrap: wrap;
 }
+
 .service-blocks .item {
     height: 290px;
     width: 570px;
@@ -190,37 +224,47 @@ header > .hero-logo img {
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .service-blocks .item .item__img {
     width: 200px;
 }
-.service-blocks .item .item__img  img{
+
+.service-blocks .item .item__img img {
     width: 100%;
 }
+
 .service-blocks .item__descr {
     margin-top: 15px;
     width: 290px;
 }
+
 .container_service {
     width: 1200px;
 }
+
 .about-company {
     background: rgb(243, 246, 248);
     padding: 63px 0 21px 0;
 }
+
 .about-company .wrap {
     display: flex;
 }
-.about-company  .about-company__descr  {
+
+.about-company .about-company__descr {
     font-weight: 300;
 }
-.about-company  .about-company__descr span {
+
+.about-company .about-company__descr span {
     font-weight: 500;
 }
+
 .title_about {
     color: #376f9e;
     font-weight: 800;
     margin-bottom: 20px;
 }
+
 .history {
     min-height: 500px;
     background-color: rgb(55, 112, 156);
@@ -233,27 +277,33 @@ header > .hero-logo img {
     align-items: center;
     color: #fff;
 }
+
 .history .wrap p {
     font-weight: 300;
     position: relative;
 }
+
 .history .wrap span {
     font-weight: 800;
     font-size: 60px;
 }
+
 .consulting {
     padding: 30px 0 15px 0;
     background: url('../img/bg/consulting.png') center center / cover no-repeat;
 }
+
 .consulting-content {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .consulting h2 {
     margin: 0 0 5px 0;
 }
+
 .history .wrap p::after {
     content: '';
     position: absolute;
@@ -263,46 +313,56 @@ header > .hero-logo img {
     width: 110%;
     height: 1px;
 }
+
 .title_consulting {
     font-size: 30px;
 }
+
 .title_consulting span {
     font-weight: 500;
 }
+
 .btn_consulting {
     border: 7px solid #fff;
     font-weight: 500;
     border-radius: 50px;
     outline: none;
 }
+
 .btn:hover {
     background-color: rgba(55, 112, 158, 0.945)
 }
+
 .news {
     min-height: 500px;
-    background: url('../img/bg/news.png') 90%  no-repeat;
+    background: url('../img/bg/news.png') 90% no-repeat;
 }
+
 .news h2 {
     position: relative;
     margin-top: 0;
 }
+
 .news .news-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .news .news-block {
     width: 250px;
 }
+
 .label::after {
     content: '';
     position: absolute;
     width: 5%;
     height: 2px;
     left: 0;
-    bottom: -10px;    
+    bottom: -10px;
     background-color: #376f9e;
 }
+
 .news .news-date {
     color: rgba(56, 56, 56, 0.61);
 }
@@ -310,6 +370,7 @@ header > .hero-logo img {
 .news .news-title {
     font-weight: 800;
 }
+
 .news .news-body {
     font-weight: 500;
 }
@@ -322,6 +383,7 @@ header > .hero-logo img {
     display: block;
     margin: 10px auto;
 }
+
 .btn-transparent:hover {
     background: transparent;
     outline: none;
@@ -332,6 +394,7 @@ header > .hero-logo img {
     padding: 10px 0;
     background: url('../img/bg/finance-school.png') center center / cover no-repeat;
 }
+
 .finance-school .title_finance {
     text-transform: uppercase;
     font-size: 40px;
@@ -341,15 +404,18 @@ header > .hero-logo img {
 
 .finance-school .about-school__descr {
     font-size: 16px;
-    font-weight: 300; 
+    font-weight: 300;
     width: 60%;
 }
+
 .finance-content {
     display: flex;
 }
+
 .finance-info {
     width: 50%;
 }
+
 .finance-info .info-block {
     position: relative;
     background-color: #fff;
@@ -358,9 +424,10 @@ header > .hero-logo img {
     margin-left: -50px;
 }
 
-.finance-info .info-block{
+.finance-info .info-block {
     margin-top: 50px;
 }
+
 .finance-info .info-block .label {
     position: absolute;
     width: 20px;
@@ -372,9 +439,11 @@ header > .hero-logo img {
 .seminar {
     padding: 10px 0 20px 0;
 }
+
 .seminar .title {
     font-size: 40px;
 }
+
 .seminar .seminar-descr {
     width: 600px;
     font-weight: 300;
@@ -389,6 +458,7 @@ header > .hero-logo img {
 .subscribe .subscribe-content {
     display: flex;
 }
+
 .subscribe .subscribe-subtitle {
     width: 50%;
     text-transform: uppercase;
@@ -397,24 +467,29 @@ header > .hero-logo img {
     border-right: 1px solid rgba(255, 255, 255, 0.207);
     padding-right: 40px;
 }
+
 .subscribe .subscribe-email {
     width: 50%;
     margin-top: 10px;
 }
+
 .subscribe .subscribe-subtitle .subscribe-count {
-   font-weight: 800;
-   display: block;
-   margin-top: 5px;
+    font-weight: 800;
+    display: block;
+    margin-top: 5px;
 }
+
 .subscribe .subscribe-subtitle .subscribe-descr {
     display: block;
     font-weight: 300;
     text-transform: lowercase;
     margin-top: -15px;
 }
+
 .subscribe .subscribe-email {
     margin-left: 50px;
 }
+
 .subscribe .subscribe-email input {
     display: block;
     padding: 10px 20px;
@@ -424,6 +499,7 @@ header > .hero-logo img {
     color: #376f9e;
     font-weight: 300;
 }
+
 .subscribe .subscribe-email input:placeholder {
     font-size: 0.8em;
 }
@@ -440,9 +516,11 @@ header > .hero-logo img {
     height: 500px;
     width: 100%;
 }
+
 .address .map {
     position: relative;
 }
+
 .address .map .contacts {
     position: absolute;
     top: 50%;
@@ -453,42 +531,50 @@ header > .hero-logo img {
     height: 200px;
     padding: 20px;
 }
+
 .address .map .contacts .contacts-border {
     border: 2px solid rgba(54, 50, 50, .5);
     padding: 10px;
 }
+
 .address .map .contacts .contacts-title {
     font-weight: 800;
     font-size: 20px;
     margin-bottom: 10px;
 }
+
 .address .map .contacts address {
     font-size: 15px;
     font-style: normal;
     display: block;
     margin-bottom: 10px;
 }
+
 .address .map .contacts a {
     display: block;
     text-decoration: none;
     color: black;
     font-weight: 800;
 }
+
 .address .map .contacts .contacts-email {
     font-weight: 500;
     color: #376f9e;
     display: block;
     margin-top: 10px;
-    font-size: 15px;    
+    font-size: 15px;
 }
+
 .address .map .contacts a:hover {
-    text-decoration: underline;    
+    text-decoration: underline;
 }
+
 .right {
     height: 20px;
     font-size: 15px;
     text-align: center;
 }
+
 .right .right-text {
     line-height: 3.5;
 }

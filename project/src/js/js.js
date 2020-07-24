@@ -134,14 +134,14 @@ scrollToTop.addEventListener('click', () => {
         const items = itemList.querySelectorAll('.item')
 
         items.forEach(item => {
-            if(item.querySelector('.item-name').textContent === itemName){
-                item.querySelector('.complete-item').addEventListener('click', function(e){
+            if (item.querySelector('.item-name').textContent === itemName) {
+                item.querySelector('.complete-item').addEventListener('click', function (e) {
                     e.preventDefault()
                     item.querySelector('.item-name').classList.toggle('completed')
                     this.classList.toggle('visibility')
                 })
 
-                item.querySelector('.edit-item').addEventListener('click',function(e){
+                item.querySelector('.edit-item').addEventListener('click', function (e) {
                     e.preventDefault()
                     itemInput.value = itemName
                     itemList.removeChild(item)
@@ -151,25 +151,25 @@ scrollToTop.addEventListener('click', () => {
                     })
                 })
 
-                item.querySelector('.delete-item').addEventListener('click',function(e){
+                item.querySelector('.delete-item').addEventListener('click', function (e) {
                     e.preventDefault()
 
                     itemList.removeChild(item)
-                    todoItems  = todoItems.filter(item => item !== itemName)
+                    todoItems = todoItems.filter(item => item !== itemName)
                     setLocalStorage(todoItems)
-                    showFeedback(itemName, 'item-deleted','info')
+                    showFeedback(itemName, 'item-deleted', 'info')
                 })
             }
         })
     }
 
     const showFeedback = (itemName, itemText, itemStatus) => {
-        if(itemName && itemText && itemStatus){
-                feedback.innerHTML = `${itemName} deleted`
-                feedback.classList.add('showItem', 'alert-'+itemStatus)
-                setTimeout(()=> {
-                    feedback.classList.remove('showItem')
-                },3000)
+        if (itemName && itemText && itemStatus) {
+            feedback.innerHTML = `${itemName} deleted`
+            feedback.classList.add('showItem', 'alert-' + itemStatus)
+            setTimeout(() => {
+                feedback.classList.remove('showItem')
+            }, 3000)
         }
     }
 
@@ -192,8 +192,8 @@ scrollToTop.addEventListener('click', () => {
 })();
 
 //slider
-(function(){
-    
+(function () {
+
     const pictures = [
         "canyon_sunset",
         "grass_fields",
@@ -205,7 +205,7 @@ scrollToTop.addEventListener('click', () => {
         "palm_tree",
         "plane_forest",
         "river_snowfall"
-]
+    ]
 
     const btns = document.querySelectorAll('.slider a')
     const sliderBackground = document.querySelector('.slider')
@@ -213,15 +213,15 @@ scrollToTop.addEventListener('click', () => {
 
     btns.forEach((btn) => {
         btn.addEventListener('click', () => {
-            if(btn.classList.contains('btn-left')){
+            if (btn.classList.contains('btn-left')) {
                 index--
-                if(index < 0){
+                if (index < 0) {
                     index = pictures.length - 1
                 }
             }
-            if(btn.classList.contains('btn-right')){
+            if (btn.classList.contains('btn-right')) {
                 index++
-                if(index > pictures.length - 1){
+                if (index > pictures.length - 1) {
                     index = 0
                 }
             }
@@ -231,13 +231,13 @@ scrollToTop.addEventListener('click', () => {
 })();
 
 //calendar
-(function(){
+(function () {
     const lang = navigator.language
 
     let date = new Date()
 
-    let monthName = date.toLocaleString(lang, {month: 'long'})
-    let dayName = date.toLocaleString(lang, {weekday: 'long'})
+    let monthName = date.toLocaleString(lang, { month: 'long' })
+    let dayName = date.toLocaleString(lang, { weekday: 'long' })
     let dayNumber = date.getDate()
     let year = date.getFullYear()
 
@@ -248,7 +248,7 @@ scrollToTop.addEventListener('click', () => {
 
 })();
 //pick color
-(function(){
+(function () {
     const colorContent = document.querySelector('.pick-color')
     const colorPicker = document.getElementById('colorPicker')
 
@@ -257,3 +257,52 @@ scrollToTop.addEventListener('click', () => {
         console.log(colorContent.style.background);
     })
 })();
+
+//mosaic
+(function () {
+    const mosaic = document.querySelector('.mosaic-block')
+    const btns = document.querySelectorAll('.mosaic button')
+
+
+    for (let i = 0; i < 96; i++) {
+        const div = document.createElement('div')
+        mosaic.appendChild(div)
+        div.classList.add('box')
+        changeColor(div)
+    }
+
+
+    function randomizeColor() {
+        const hexValue = 'abcfde123456'
+        const colorLength = 6
+        let color = ''
+
+        for (let i = 0; i < colorLength; i++) {
+            let colorNumber = Math.floor(Math.random() * hexValue.length)
+            color += hexValue.substring(colorNumber, colorNumber + 1)
+        }
+        return '#' + color
+    }
+
+    function setColor() {
+        document.querySelectorAll('.mosaic .box').forEach((box) => {
+            box.style.background = randomizeColor()
+            box.classList.add('box-shadow')
+        })
+    }
+
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.textContent === 'type1') {
+                setColor()
+            }
+
+        })
+    })
+
+    function changeColor(div) {
+        div.addEventListener('click', () => {
+            div.style.background = randomizeColor()
+        })
+    }
+})()
