@@ -1,0 +1,16 @@
+.pick-color {
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  background: #000;
+  #colorPicker {
+    outline: none;
+    border: 2px solid #111;
+    height: 50px;
+    width: 50px;
+    background: transparent;
+    cursor: pointer;
+  }
+  > .text {
+    font-weight: 500;
+  }
+}

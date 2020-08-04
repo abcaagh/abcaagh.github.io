@@ -1,0 +1,23 @@
+.random-hex {
+  button {
+    position: relative; 
+    width: 200px;
+    height: 40px;
+    &:hover {
+        span {
+            display: none;
+        }
+        i {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+  } 
+  button i {
+    position: absolute;
+    top: 31%;
+    left: 30px;
+    transition: all .9s;
+  }
+
+}

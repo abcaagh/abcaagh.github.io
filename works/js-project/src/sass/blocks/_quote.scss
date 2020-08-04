@@ -1,0 +1,40 @@
+.quote-container {
+  height: 500px;
+  width: 800px;
+  background-color: #cbeaed;
+  border-radius: 4px;
+  box-shadow: 1px 3px 10px 1px;
+  padding: 30px;
+  text-align: center;
+  .btn {
+    display: block;
+    margin: 20px auto;
+    background-color: #006a71;
+    padding: 10px;
+    border: none;
+    color: #cbeaed;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    text-transform: capitalize;
+    &:hover {
+      background-color: #075b61;
+    }
+  }
+  .quote-text {
+    width: 90%;
+    text-align: left;
+    font-size: 25px;
+    color: #006a71;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .author {
+    margin: 20px 0 0 450px;
+    color: #075b61;
+    font-weight: 800;
+  }
+}

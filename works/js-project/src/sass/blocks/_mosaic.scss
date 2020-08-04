@@ -1,0 +1,29 @@
+.mosaic {
+    background: #ebecf1;
+    padding-top: 50px;
+    .mosaic-block {
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    .box {
+        height: 50px;
+        width: 50px;
+        border: 1px solid black;
+        position: relative;
+        cursor: pointer;
+        &.box-shadow {
+            &::after {
+                content: '';
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, .1);
+            }
+        }
+    }
+}

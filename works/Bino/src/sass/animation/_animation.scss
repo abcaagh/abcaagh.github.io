@@ -1,0 +1,165 @@
+.welcome {
+  &-menu {
+    &__link {
+      &:hover {
+        color: $main-color;
+        text-decoration: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $main-color;
+        bottom: -10px;
+        opacity: 0;
+        transition: all 0.4s ease;
+        left: 0;
+      }
+      &:hover::before {
+        left: 50%;
+        opacity: 1;
+      }
+      animation: toRight;
+      animation-duration: calc(0.4s * var(--i));
+    }
+  }
+  //// hamburger-menu
+  .menu-toggle {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    z-index: 10;
+    .hamburger,
+    .cross {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .hamburger span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      margin-bottom: 3px;
+      position: relative;
+      overflow: hidden;
+      &:last-child {
+        margin: 0;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        transform: translateX(-200%);
+        transition: transform 300ms ease;
+      }
+      &::after {
+        transform: translateX(0);
+      }
+      &:nth-child(2)::after,
+      &:nth-child(2)::before {
+        transition-delay: 75ms;
+      }
+      &:nth-child(3)::after,
+      &:nth-child(3)::before {
+        transition-delay: 150ms;
+      }
+    }
+    &:hover {
+      .hamburger span {
+        &::after {
+          transform: translateX(200%);
+        }
+        &::before {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    .cross span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background-color: white;
+      transform: translateY(50%) rotate(45deg) scaleX(0);
+      transition: transform ease 200ms;
+      &:last-child {
+        transform: translateY(-50%) rotate(-45deg) scaleX(0);
+      }
+    }
+    &.active {
+      .hamburger span {
+        &::before {
+          transform: translateX(100%);
+        }
+        &::after {
+          transform: translateX(200%);
+        }
+      }
+      .cross span {
+        transition-delay: 450ms;
+        transform: translateY(50%) rotate(45deg) scaleX(1);
+        &:last-child {
+          transform: translateY(-50%) rotate(-45deg) scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+////////button
+.button_welcome,
+.button_transparent {
+  position: relative;
+  i {
+    position: absolute;
+    margin-right: 5px;
+    transition: 0.25s;
+    left: 20px;
+    bottom: 17px;
+    font-size: 25px;
+  }
+  &:hover {
+    background-color: rgba($color: $main-color, $alpha: 0.7);
+    i {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    span {
+      display: none;
+    }
+  }
+}
+.button_transparent {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+@keyframes toRight {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
