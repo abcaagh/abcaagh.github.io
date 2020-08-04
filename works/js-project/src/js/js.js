@@ -1,5 +1,9 @@
 console.info('%cbehzkan', 'font-size: 30px;background: #342b38; color: #ff9595; text-shadow: 2px 2px black; border: 1px solid black; padding: 20px; padding-right:100px ;padding-left:100px;text-align: center;border-radius: 4px;margin: 20px; ');
 
+import { reverseStr } from "./apps/reverseStr.js";
+import { counter } from './apps/counter.js';
+    counter()
+
 const scrollToTop = document.getElementById('scroll-to-top')
 let dataShow = false
 
@@ -23,36 +27,6 @@ scrollToTop.addEventListener('click', () => {
     })
 });
 
-//Counter
-(function () {
-    const counter = document.querySelector('.counter-value')
-    const btnParent = document.querySelector('.counter-btn')
-
-    btnParent.addEventListener('click', (event) => {
-        const target = event.target
-        if (counter.textContent.length < 3) {
-            if (target.textContent === '+') {
-                counter.textContent++
-            } else if (target.textContent === '-') {
-                counter.textContent--
-            }
-        } else {
-            counter.textContent = 0
-        }
-        color()
-    })
-
-    function color(value) {
-        if (counter.textContent > 0) {
-            counter.style.color = '#f9d89c'
-        } else if (counter.textContent < 0) {
-            counter.style.color = '#5fdde5'
-        } else {
-            counter.style.color = '#f96d80'
-
-        }
-    }
-})();
 
 //randomHexColor
 (function () {
@@ -381,4 +355,3 @@ scrollToTop.addEventListener('click', () => {
     })
 })()
 
-import { reverseStr } from "./projects/reverseStr.js";

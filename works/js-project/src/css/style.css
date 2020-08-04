@@ -97,77 +97,64 @@
   color: #ff9595;
 }
 
-.counter-body {
+.counter {
+  background-color: #eee;
+}
+
+.counter-box {
   -webkit-box-shadow: 0 0 5px 2px rgba(48, 57, 96, 0.5);
           box-shadow: 0 0 5px 2px rgba(48, 57, 96, 0.5);
   border: 1px solid #ff9595;
   border-radius: 7px;
   padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #ff9595;
 }
 
-.counter-body h2 {
-  color: #f96d80;
-  text-shadow: 2px 2px #303960;
-  margin-bottom: 25px;
-  font-size: 45px;
-}
-
-.counter-body .counter-value {
-  width: 200px;
+.counter-number {
   font-size: 130px;
-  margin-left: 60px;
   line-height: 100px;
   color: #f96d80;
   text-align: center;
   text-shadow: 2px 2px #303960;
 }
 
-.counter-body .btn {
-  width: 40px;
-  height: 40px;
-}
-
-.counter-body .btn-plus {
-  background-color: #f96d80;
-}
-
-.counter-body .btn-minus {
-  background-color: #5fdde5;
-}
-
-.wrap {
+.counter-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 200px;
-  background-color: aqua;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
 }
 
-.wrap button {
-  background-color: black;
-  margin-right: 5px;
-  color: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.counter-header h2 {
+  color: #f96d80;
+  text-shadow: 2px 2px #303960;
+  font-size: 45px;
+  margin: 0;
+}
+
+.counter .btn {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.counter .btn-plus {
+  background-color: #f96d80;
+}
+
+.counter .btn-minus {
+  background-color: #5fdde5;
+}
+
+.counter .btn-reset {
+  display: block;
+  margin-top: 10px;
+  width: 85px;
 }
 
 .random-hex button {
@@ -540,12 +527,6 @@ body::-webkit-scrollbar-thumb {
   background: #127681;
 }
 
-main {
-  margin-left: 200px;
-  width: 100%;
-  height: 100%;
-}
-
 hr {
   margin: 0;
 }
@@ -590,5 +571,10 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=style.css.map */

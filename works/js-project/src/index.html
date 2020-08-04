@@ -12,47 +12,29 @@
 </head>
 
 <body>
-    <div id="scroll-to-top" data-show="false">
-        <i class="fa fa-arrow-up"></i>
-    </div>
-    <nav class="navbar">
-        <div class="logo__wrap">
-            <a href="#" class="logo">Logo</a>
-        </div>
-        <ul class="menu">
-            <li class="menu__item">
-                <a href=""><span class="icon-stopwatch"></span>Counter</a>
-            </li>
-            <li class="menu__item">
-                <a href="">Random Hex BG Color</a>
-            </li>
-            <li class="menu__item">
-                <a href="">Shopping List</a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <div class="badge badge-danger ml-3 mt-3 position-fixed ">
-            <a href="/index.html" class="text-white">Назад</a>
-        </div>
+    <div class="app">
+        <!-- counter -->
         <div class="counter section">
-            <div class="counter-body">
-                <div class="counter-elem">
+            <div class="counter-box">
+                <div class="counter-header">
                     <h2 class="">Counter</h2>
-                    <div class="counter-btn ">
-                        <button class="btn btn-minus">-</button>
-                        <button class="btn btn-plus">+</button>
-                    </div>
+                    <div class="counter-number">0</div>
                 </div>
-                <div class="counter-value">0</div>
+                <div class="counter-btns">
+                    <button data-count="decrase" class="btn btn-minus">-</button>
+                    <button data-count="increase" class="btn btn-plus">+</button>
+                    <button data-count="reset" class="btn btn-dark btn-reset">Reset</button>
+                </div>
             </div>
         </div>
         <hr>
-
+        <!-- random background color -->
         <div class="random-hex text-center section">
             <div>
-                <button class="btn btn-outline-dark mt-5"><i class="fa fa-random mr-1"></i><span>Randomize</span></button>
-                <p class="hex-value mt-3  w-25 h-25  mx-auto"><span class="text-capitalize">background color:</span><strong class="text-uppercase"> #ffffff</strong></p>
+                <button class="btn btn-outline-dark mt-5"><i
+                        class="fa fa-random mr-1"></i><span>Randomize</span></button>
+                <p class="hex-value mt-3  w-25 h-25  mx-auto"><span class="text-capitalize">background
+                        color:</span><strong class="text-uppercase"> #ffffff</strong></p>
             </div>
         </div>
         <hr>
@@ -129,7 +111,9 @@
             <div class="quote-container">
                 <button class="btn">Generate quote</button>
                 <p class="quote-text">
-                    slorem ipsum dolor, sit amet consectetur adipisicing elit. Eius fuga officiis saepe labore accusantium eveniet architecto dignissimos iure optio laudantium perspiciatis quod, ex cumque maxime libero quaerat harum pariatur ipsum.
+                    slorem ipsum dolor, sit amet consectetur adipisicing elit. Eius fuga officiis saepe labore
+                    accusantium eveniet architecto dignissimos iure optio laudantium perspiciatis quod, ex cumque maxime
+                    libero quaerat harum pariatur ipsum.
                 </p>
                 <div class="author">- <strong>Lorem</strong></div>
             </div>
@@ -156,7 +140,10 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+    <div id="scroll-to-top" data-show="false">
+        <i class="fa fa-arrow-up"></i>
+    </div>
     <script src="./js/js.js" type="module"></script>
 </body>
 
