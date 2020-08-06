@@ -1,6 +1,6 @@
 const counterValue = document.querySelector('.counter-number')
 const btns = document.querySelectorAll('.counter-btns .btn')
-let number = getLocalStorage() ? getLocalStorage() : 0
+let number = getSessionStorage() ? getSessionStorage() : 0
 setNumber(number)
 
 //event on click 
@@ -14,21 +14,18 @@ export const counter = () => {
             } else {
                 number = 0
             }
-            setLocalStorage(number)
+            setSessionStorage(number)
             setNumber(number)
         })
     });
 }
-
-function setLocalStorage(int) {
-    if (int) {
-        localStorage.setItem('counterNumber', int)
-    }else {
-        localStorage.removeItem('counterNumber')
-    }
+//store data locally
+function setSessionStorage(int) {
+    int ? sessionStorage.setItem('counterNumber', int) 
+        : sessionStorage.removeItem('counterNumber')
 }
-function getLocalStorage() {
-    return localStorage.getItem('counterNumber')
+function getSessionStorage() {
+    return sessionStorage.getItem('counterNumber')
 }
 
 //enter to html
@@ -47,4 +44,3 @@ function setColor(int) {
         counterValue.style.color = '#f96d80'
     }
 }
-

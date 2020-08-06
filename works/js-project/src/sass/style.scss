@@ -1,9 +1,9 @@
-:root {
+* {
     font-family: "Montserrat", sans-serif;
 }
 @import './blocks/navbar';
 @import './blocks/counter';
-@import './blocks/_randomHex';
+@import './blocks/randomBg';
 @import './blocks/todolist';
 @import './blocks/slider';
 @import './blocks/calendar';

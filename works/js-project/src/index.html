@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>JS projects</title>
+    <title>JS project</title>
 </head>
 
 <body>
     <div class="app">
+
         <!-- counter -->
         <div class="counter section">
             <div class="counter-box">
@@ -28,61 +29,57 @@
             </div>
         </div>
         <hr>
-        <!-- random background color -->
-        <div class="random-hex text-center section">
-            <div>
-                <button class="btn btn-outline-dark mt-5"><i
-                        class="fa fa-random mr-1"></i><span>Randomize</span></button>
-                <p class="hex-value mt-3  w-25 h-25  mx-auto"><span class="text-capitalize">background
-                        color:</span><strong class="text-uppercase"> #ffffff</strong></p>
-            </div>
-        </div>
-        <hr>
-        <div class="todo">
-            <div class="container ">
-                <div class="row">
-                    <div class="col col-md-8 mx-auto mt-3 text-center text-capitalize">
-                        <div class="alert   feedback">
-                            write value for item
-                        </div>
-                        <form class="my-3" id="itemForm">
-                            <h3 class="mb-4">to do list</h3>
-                            <div class="input-group">
-                                <input type="text" placeholder="name..." class="form-control" id="itemInput">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-primary">Add item</button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="item-container">
-                            <div class="item-list my-5">
-                                <div class="item my-3">
-                                    <h5 class="item-name">Todo</h5>
-                                    <div class="item-icons">
-                                        <a href="#" class="complete-item mx-2 item-icon">
-                                            <i class="fa fa-check-circle"></i>
-                                        </a>
-                                        <a href="#" class="edit-item mx-2 item-icon">
-                                            <i class="fa fa-edit"></i>
-                                        </a>
-                                        <a href="#" class="delete-item ml-2 item-icon">
-                                            <i class="fa fa-times-circle"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <button id="clear-list" class="btn btn-outline-danger my-3">Clear items</button>
+
+        <!-- Reverse text -->
+        <div class="reverse section">
+            <div class="reverse-box">
+                <h1 class="reverse__title">Reverse text</h1>
+                <div class="reverse-body">
+                    <form class="reverse-form form reverse-input flex-item">
+                        <select class="form-select" name="type" id="typeOfReverse" required>
+                            <option value="type1">Type 1</option>
+                            <option value=type2>Type 2</option>
+                            <option value="type3">CamelCase</option>
+                        </select>
+                        <input name="type" class="form-input" type="text" placeholder="Reverse Text">
+                    </form>
+                    <div class="reverse-output flex-item">
+                        <div>
+                            <p class="output-text"></p>
+                            <button class="btn btn-info copyBtn">Copy to Clipboard!</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <hr>
-        <div class="slider align-items-center section">
-            <a class="btn btn-left"><i class="fa fa-caret-left"></i></a>
-            <a class="btn btn-right"><i class="fa fa-caret-right"></i></a>
+
+        <!-- random background color -->
+        <div class="random-bg text-center section">
+            <h1>Random background color generator</h1>
+            <button class="btn btn-outline-dark mt-5">
+                Generate
+            </button>
+            <p class="hex-value mt-3  w-25 h-25  mx-auto">
+                <span class="text-capitalize">
+                    background color:
+                </span>
+                <strong class="text-uppercase random-output"></strong>
+            </p>
         </div>
         <hr>
+
+        <!-- slider -->
+        <div class="slider align-items-center section">
+            <a class="btn btn-left">
+                <i class="fa fa-caret-left"></i>
+            </a>
+            <a class="btn btn-right">
+                <i class="fa fa-caret-right"></i>
+            </a>
+        </div>
+        <hr>
+
+        <!-- calendar -->
         <div class="chronology section">
             <div class="calendar">
                 <div id="monthName"></div>
@@ -116,28 +113,6 @@
                     libero quaerat harum pariatur ipsum.
                 </p>
                 <div class="author">- <strong>Lorem</strong></div>
-            </div>
-        </div>
-        <!-- Reverse text -->
-        <div class="reverse section">
-            <div class="reverse-box">
-                <h1 class="reverse__title">Reverse text</h1>
-                <div class="reverse-body">
-                    <div class="reverse-input-block flex-item">
-                        <form action="#" class="reverse-form">
-                            <select class="reverse-select" name="type" id="typeOfReverse" required>
-                                <option value="type1">Type 1</option>
-                                <option value=type2">Type 2</option>
-                            </select>
-                            <input name="type" class="reverse__input" type="text" placeholder="Reverse Text">
-                        </form>
-                    </div>
-                    <div class="reverse-output-block flex-item">
-                        <div class="reverse-output">
-                            <p>txeT esreveR</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
