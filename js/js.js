@@ -68,13 +68,13 @@ _1.addEventListener('click', (e) => {
         ${ip.network.organisation} 
         "{locatin.strict}.UnauthorizedUser
         {strict.error}
-        {ваши lfyyst отправленs на yfi сервер}"
+        { lfyyst отправленs на yfi сервер}"
         `
 })
 ws.addEventListener('click', event => {
     cont.innerHTML = `
     <div class="ws_div">
-        <input type="number" autofocus autocomplete="on" id="ws_input" placeholder="700 123 45 67" maxlength="11" minlength="10">
+        <input type="number" autofocus autocomplete="on" id="ws_input" placeholder="7700 123 45 67" maxlength="11" minlength="10">
         <a href="" 
         target="_blank" class="ws_link">Начните чат в WhatsApp с <span class="span"></span></a>
     </div>
