@@ -213,3 +213,16 @@ body {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+.ws_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#ws_input {
+  display: block;
+}
+.ws_link {
+  display: block;
+  color: #ededed
+}
