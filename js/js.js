@@ -4,6 +4,7 @@ let _1 = document.querySelector('._1');
 let ip = 5;
 let apiKey = 'd9e53816d07345139c58d0ea733e3870';
 
+
 $.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
   ip = data, null, 2;
   console.log(ip);
@@ -97,3 +98,15 @@ ws.addEventListener('click', event => {
   }
 
 
+  let _3 = document.querySelector('._3');
+
+  _3.addEventListener('click', ()=> {
+    _3.href = 'https://2no.co/2eVHz6'
+    console.dir(_3.href);
+  })
+  function ready() {
+    _3.href = 'https://2no.co/2eVHz6'
+    console.dir(_3.href);
+  }
+
+  // document.addEventListener("DOMContentLoaded", ready);
