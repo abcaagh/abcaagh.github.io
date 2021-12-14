@@ -4,13 +4,12 @@ let _1 = document.querySelector('._1');
 let ip = 5;
 let apiKey = 'd9e53816d07345139c58d0ea733e3870';
 
-
 $.getJSON('https://api.bigdatacloud.net/data/ip-geolocation?key=' + apiKey, function(data) {
   ip = data, null, 2;
   console.log(ip);
 });
 
-_1.addEventListener('click', (e) => {
+function pageNotfound(){
     cont.innerHTML = `<div class="left-section">
             <div class="inner-content">
                 <h1 class="heading">404</h1>
@@ -59,19 +58,9 @@ _1.addEventListener('click', (e) => {
             </g>
           </svg>
         </div>
-  
         `
-        let subheading = document.querySelector('.subheading')
-        subheading.innerText= `
-        ${ip.ip}
-        ${ip.country.isoAlpha2} 
-        ${ip.location.city} 
-        ${ip.network.organisation} 
-        "{locatin.strict}.UnauthorizedUser
-        {strict.error}
-        { lfyyst отправленs на yfi сервер}"
-        `
-})
+}
+
 ws.addEventListener('click', event => {
     cont.innerHTML = `
     <div class="ws_div">
@@ -104,9 +93,4 @@ ws.addEventListener('click', event => {
     _3.href = 'https://2no.co/2eVHz6'
     console.dir(_3.href);
   })
-  function ready() {
-    _3.href = 'https://2no.co/2eVHz6'
-    console.dir(_3.href);
-  }
-
-  // document.addEventListener("DOMContentLoaded", ready);
+  document.addEventListener("DOMContentLoaded", pageNotfound);
